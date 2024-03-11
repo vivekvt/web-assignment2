@@ -97,7 +97,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else {
         // Failed to insert product
         http_response_code(400);
-        echo json_encode(array('status' => 'error', 'message' => 'Product creation failed.'));
+        $error = array('status' => 'error', 'message' => 'User creation failed', 'error' => $conn->error);
+        echo json_encode($error);
     }
 }
 
