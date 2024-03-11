@@ -1,0 +1,459 @@
+{
+	"info": {
+		"_postman_id": "ea31790c-b2bf-4933-9995-85c017d0c4a0",
+		"name": "Assignment2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "11996849"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Get Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/products.php"
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/products.php?product_id=3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products.php"
+							],
+							"query": [
+								{
+									"key": "product_id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/products.php?product_id=6",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products.php"
+							],
+							"query": [
+								{
+									"key": "product_id",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"tesla\",\n    \"description\": \"hello\",\n    \"image\": \"Image URL\",\n    \"pricing\": \"12\",\n    \"shipping_cost\": \"2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/products.php"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"5\",\n    \"title\": \"Product Name changed\",\n    \"description\": \"This is a sample product description.\",\n    \"image\": \"https://example.com/image.jpg\",\n    \"pricing\": \"20\",\n    \"shipping_cost\": \"5.99\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/products.php"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "Get Orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/orders.php"
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Order by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/orders.php?order_id=2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"orders.php"
+							],
+							"query": [
+								{
+									"key": "order_id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Order",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/orders.php?order_id=2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"orders.php"
+							],
+							"query": [
+								{
+									"key": "order_id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": 14,\n    \"order_items\": [\n        {\n            \"product_id\": 2,\n            \"quantity\": 3\n        }\n    ],\n    \"total_price\": 99\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/orders.php"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 3,\n    \"user_id\": 14,\n    \"order_items\": [\n        {\n            \"product_id\": 2,\n            \"quantity\": 3\n        }\n    ],\n    \"total_price\": 120\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/orders.php"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "Get Cart",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/cart.php"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Cart",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/cart.php?cart_id=2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cart.php"
+							],
+							"query": [
+								{
+									"key": "cart_id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Cart",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"product_id\": 2,\n  \"user_id\": 13,\n  \"quantities\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/cart.php?cart_id=6",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cart.php"
+							],
+							"query": [
+								{
+									"key": "cart_id",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Cart",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 2,\n    \"product_id\": 2,\n    \"user_id\": 13,\n    \"quantities\": 4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/cart.php"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comments",
+			"item": [
+				{
+					"name": "Get Comments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/comments.php"
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Comment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/comments.php?comment_id=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"comments.php"
+							],
+							"query": [
+								{
+									"key": "comment_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Comment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/comments.php?comment_id=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"comments.php"
+							],
+							"query": [
+								{
+									"key": "comment_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Comment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_id\": 2,\n    \"user_id\": 13,\n    \"rating\": 4,\n    \"image\": \"https://example.com/comment_image.jpg\",\n    \"text\": \"This product exceeded my expectations. Highly recommended!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/comments.php"
+					},
+					"response": []
+				},
+				{
+					"name": "Update comment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"product_id\": 2,\n    \"user_id\": 13,\n    \"rating\": 4,\n    \"image\": \"https://example.com/comment_image.jpg\",\n    \"text\": \"changed This product exceeded my expectations. Highly recommended!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/comments.php"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get User Profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMTQiLCJlbWFpbCI6ImRlbW9AZ21haWwuY29tIiwiZXhwIjoxNzEyNzAyOTg5fQ.g_yhZjRH6XwA10qMtIxeN5o7K6tcBNEYAe82G92hwVM",
+								"type": "text"
+							}
+						],
+						"url": "{{url}}/users"
+					},
+					"response": []
+				},
+				{
+					"name": "User Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"demo2@gmail.com\",\n    \"password\": \"demo2\",\n    \"username\": \"demo2\",\n    \"purchase_history\": \"1\",\n    \"shipping_address\": \"DTK Kitchener\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/users/register.php"
+					},
+					"response": []
+				},
+				{
+					"name": "User Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"demo2@gmail.com\",\n    \"password\": \"demo2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/users/login.php"
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"13\",\n    \"email\": \"demo@gmail.comsms\",\n    \"username\": \"democ\",\n    \"purchase_history\": \"1\",\n    \"shipping_address\": \"DTK Kitchener\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/users/index.php"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
